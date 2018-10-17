@@ -1,5 +1,207 @@
-$bg-color: pink;
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  height: 100%;
+  color: white;
+  background-color: black;
+}
 
-body {
-  background: $bg-color;
+div, section, main {
+  box-sizing: border-box;
+}
+
+a {
+  color: steelblue;
+}
+
+/**************************************************
+Главные блоки
+ ***************************************************/
+
+main {
+  width: 100%;
+  height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.animation-ancor {
+  height: 100%;
+}
+
+.history, .start-action, .timer {
+  padding: 10px 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.timer, .start-action {
+  align-items: center;
+}
+
+.history {
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/**************************************************
+Стили для паузы
+ ***************************************************/
+
+.pause-btn, .mute-btn {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  z-index: 10;
+  font-size: 20px;
+}
+
+.pause-btn:hover, .mute-btn:hover {
+  cursor: pointer;
+}
+
+.mute-btn {
+  top: 100px
+}
+
+/**************************************************
+Первый блок с активационной кнопкой
+ ***************************************************/
+
+.activate-element {
+  max-width: 100%;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.activate-element:hover {
+  cursor: pointer;
+}
+
+/**************************************************
+Текст
+ ***************************************************/
+
+.history p {
+  //font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-align: left;
+  padding: 0 10px;
+  line-height: 60px;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .history p {
+    font-size: 26px;
+    line-height: 56px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .history p {
+    font-size: 22px;
+    line-height: 46px;
+  }
+}
+
+/**************************************************
+Таймер
+ ***************************************************/
+
+.timer-container {
+  min-width: 80%;
+  display: flex;
+  height: 200px;
+  justify-content: space-around;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .timer-container {
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .timer-container {
+    min-width: 40%;
+  }
+}
+
+.time-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  width: 120px;
+  border: transparent;
+  border-radius: 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.value {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 49px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.year-value {
+  background-color: #1730ED;
+}
+
+.month-value {
+  background-color: #CDCD53;
+}
+
+.day-value {
+  background-color: #960000;
+}
+
+.hour-value {
+  background-color: transparent;
+}
+
+/**************************************************
+Анимация
+ ***************************************************/
+
+.start-animation {
+  animation: move 50s linear;
+  animation-fill-mode: forwards;
+}
+
+.pause-animation {
+  animation-play-state: paused;
+}
+
+@keyframes move {
+  to {transform: translateY(-200%)}
 }

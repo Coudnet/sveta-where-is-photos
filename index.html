@@ -2,10 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WebPack Server Test Page</title>
+    <title>Свет, где фотки?</title>
     <link rel='stylesheet' href='dist/style.css'>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Noto+Sans|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
+    <main>
+        <div class="pause-btn"><i class="fas fa-pause"></i></div>
+        <div class="mute-btn"><i class="fas fa-volume-mute"></i></div>
+        <div class="animation-ancor">
+            <section class="start-action">
+                <div class="activate-element">
+                    <img src="dist/img/37730321-1038461.jpg" alt="">
+                </div>
+            </section>
+            <section class="history">
+                <p>
+                    В июне (ориентировочно) 2018 года Света <a href="https://www.instagram.com/karareo">@karareo</a> организовала
+                    фотосессию для Гриши <a href="https://www.instagram.com/grissha.fkn">@grissha.fkn</a>
+                    и Эли <a href="https://www.instagram.com/elleaeae">@elleaeae</a>. Работа проходила на стадионе,
+                    находящемся на территории Дворца Пионеров. В месте, где
+                    фотосъемка официально запрещена. Никаких последствий для фотографирующихся запрет не имел. Поэтому этот
+                    факт можно считать не важным. Никаких запрещенных веществ фотографирующиеся не имели. Как и разрешенных.
+                    Не было сангрии, не было ЛСД. Состояние фотографирующихся было обычным. И никаких странных поступков
+                    фотографирующиеся не совершали. Так что факты про вещкства тоже не важны. Как и все остальное в этом тексте.
+                </p>
+                <p>Кроме одного</p>
+                <br>
+                <p>Уже есть страничка в сети, а фотографий все нет</p>
+            </section>
+            <section class="timer">
+                <div class="timer-container">
+                    <div class="time-type">
+                        <div class="value year-value">0</div>
+                        <div class="title">Лет</div>
+                    </div>
+                    <div class="time-type">
+                        <div class="value month-value">1</div>
+                        <div class="title">Месяцев</div>
+                    </div>
+                    <div class="time-type">
+                        <div class="value day-value">2</div>
+                        <div class="title">Дней</div>
+                    </div>
+                    <div class="time-type">
+                        <div class="value hour-value">3</div>
+                        <div class="title">Часов</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <audio src="dist/music/Gary Numan - Trois Gymnopedies.mp3" id="audio" loop></audio>
+    </main>
     <script src="dist/bundle.js"></script>
 </body>
 </html>
