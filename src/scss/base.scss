@@ -33,13 +33,17 @@ main {
 
 .history, .start-action, .timer {
   padding: 10px 0;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   justify-content: center;
 }
 
 .timer, .start-action {
   align-items: center;
+}
+
+.timer {
+  flex-direction: column;
 }
 
 .history {
@@ -126,25 +130,17 @@ main {
 Таймер
  ***************************************************/
 
+.timer-title {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .timer-container {
-  min-width: 80%;
   display: flex;
   height: 200px;
   justify-content: space-around;
-}
-
-
-
-@media screen and (max-width: 1024px) {
-  .timer-container {
-
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .timer-container {
-    min-width: 40%;
-  }
+  width: 100%;
 }
 
 .time-type {
@@ -189,6 +185,50 @@ main {
   background-color: transparent;
 }
 
+@media screen and (max-width: 500px) {
+  .timer-title {
+    font-size: 32px;
+  }
+
+  .timer-container {
+    width: 100%;
+  }
+
+  .time-type {
+    width: 65px;
+    height: 150px;
+  }
+
+  .value {
+    height: 80%;
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .timer-title {
+    font-size: 24px;
+  }
+
+  .time-type {
+    width: 65px;
+    height: 150px;
+  }
+
+  .value {
+    height: 80%;
+    font-size: 32px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+}
+
 /**************************************************
 Анимация
  ***************************************************/
@@ -198,10 +238,55 @@ main {
   animation-fill-mode: forwards;
 }
 
+@media screen and (max-width: 500px) {
+  .start-animation  {
+    animation: move2 40s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .start-animation  {
+    animation: move5 40s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .start-animation  {
+    animation: move3 40s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .start-animation  {
+    animation: move4 40s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+
 .pause-animation {
   animation-play-state: paused;
 }
 
 @keyframes move {
-  to {transform: translateY(-200%)}
+  to {transform: translateY(-225%)}
+}
+
+@keyframes move2 {
+  to {transform: translateY(-380%)}
+}
+
+@keyframes move3 {
+  to {transform: translateY(-380%)}
+}
+
+@keyframes move4 {
+  to {transform: translateY(-490%)}
+}
+
+@keyframes move5 {
+  to {transform: translateY(-320%)}
 }

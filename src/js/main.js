@@ -9,10 +9,13 @@ let startDate = new Date(2018, 6);
 document.querySelector('.activate-element').addEventListener('click', function () {
     muteBtn.innerHTML = "<i class=\"fas fa-volume-down\"></i>";
     audio.play();
-    setTimeout(() => {
+    /*setTimeout(() => {
         animationAncorElement.classList.add('start-animation');
         animationPlay = true;
-    }, 4500);
+    }, 4500);*/
+    animationAncorElement.classList.add('start-animation');
+    animationPlay = true;
+
     timeTimer();
 });
 
