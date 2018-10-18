@@ -9,13 +9,10 @@ let startDate = new Date(2018, 6);
 document.querySelector('.activate-element').addEventListener('click', function () {
     muteBtn.innerHTML = "<i class=\"fas fa-volume-down\"></i>";
     audio.play();
-    /*setTimeout(() => {
+    setTimeout(() => {
         animationAncorElement.classList.add('start-animation');
         animationPlay = true;
-    }, 4500);*/
-    animationAncorElement.classList.add('start-animation');
-    animationPlay = true;
-
+    }, 4500);
     timeTimer();
 });
 
@@ -42,13 +39,18 @@ muteBtn.addEventListener('click', function () {
 });
 
 function timeTimer() {
-    let dif = null;
+    const yearBlock = document.querySelector('.year-value');
+    const monthBlock = document.querySelector('.month-value');
+    const dayBlock = document.querySelector('.day-value');
+    const hourBlock = document.querySelector('.hour-value');
+
     let timer = setTimeout(function timeCount() {
         let dif = calcDate(Date.now(), startDate);
-        document.querySelector('.year-value').innerHTML = dif.years;
-        document.querySelector('.month-value').innerHTML = dif.months;
-        document.querySelector('.day-value').innerHTML = dif.days;
-        document.querySelector('.hour-value').innerHTML = dif.hours;
+
+        yearBlock.innerHTML = dif.years;
+        monthBlock.innerHTML = dif.months;
+        dayBlock.innerHTML = dif.days;
+        hourBlock.innerHTML = dif.hours;
 
         timer = setTimeout(timeCount, 1000);
     }, 1000);
